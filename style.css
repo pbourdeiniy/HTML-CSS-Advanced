@@ -1,36 +1,40 @@
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  /* gap: 400px; */
   height: 300px;
   border: 3px solid red;
+  justify-content: space-between;
+  /* justify-content: space-around; */
+  /* justify-content: space-evenly; */
 }
 
 .box {
- height: 50px;
- width: 60px;
- /* margin: auto; */
+ padding: 5px 10px;
  border: 3px solid blue;
- background-color: yellow; 
- /* margin: 5px; */
+ background-color: yellow;
 }
 
 .box-2 {
-order: -2;
+font-size: 30px;
+/* margin-left: 10px; */
 }   
 
 .box-4 {
- order: -1;
+ padding-top: 40px;
 }  
+
+.box-5 {
+  padding-bottom: 30px;
+}
 
 
 
 
 /* 
- To reorder elements, you can use 
- flex-direction (normal or reverse), or 
- the order property, which arranges 
- elements in ascending order. Elements 
- with the same order value maintain their 
- original HTML order.
-
+justify-content property lets us arrange 
+alignment along the main axes. Flexbox guide 
+lets us better understand every single value
+of ustify-content
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 */
