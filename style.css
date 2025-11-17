@@ -1,12 +1,11 @@
 .container {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
   height: 300px;
   border: 3px solid red;
 }
 
 .box {
- display: inline;
  height: 50px;
  width: 60px;
  /* margin: auto; */
@@ -15,24 +14,23 @@
  /* margin: 5px; */
 }
 
-/* .box-2 {
-  margin: 0 auto;
-}  */
+.box-2 {
+order: -2;
+}   
+
+.box-4 {
+ order: -1;
+}  
+
+
 
 
 /* 
-A container with display: flex provides 
-flexible control over its child elements. 
-Flexbox creates a consistent layout model 
-where vertical margin collapsing does not 
-occur, and margin: auto works for centering 
-and spacing elements. Also, the display 
-value of flex children does not affect 
-their layout: even if a flex item is set 
-to display: inline, it still behaves like 
-a block-level element and can have its 
-width and height defined, because all 
-direct children of a flex container are 
-treated as flex items.
+ To reorder elements, you can use 
+ flex-direction (normal or reverse), or 
+ the order property, which arranges 
+ elements in ascending order. Elements 
+ with the same order value maintain their 
+ original HTML order.
 
 */
