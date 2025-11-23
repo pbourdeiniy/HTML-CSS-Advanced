@@ -1,43 +1,53 @@
 .container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
   /* gap: 400px; */
   height: 300px;
   border: 3px solid red;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   /* justify-content: space-around; */
   /* justify-content: space-evenly; */
-  justify-content: center;
+  /* justify-content: space-evenly; */
   /* align-items: flex-start; */
-  align-items: baseline;
+  align-items: flex-start;
+  align-content: center;
 }
 
 .box {
  padding: 5px 10px;
+ /* width: 500px; */
  border: 3px solid blue;
  background-color: yellow;
 }
 
 .box-2 {
 font-size: 30px;
-margin-left: 20px;
+/* margin-left: 20px; */
 }   
 
 .box-4 {
  padding-top: 40px;
- align-self: flex-start;
+ /* align-self: flex-start; */
 }  
 
 .box-5 {
   padding-bottom: 30px;
-  align-self: flex-end;
+  /* align-self: flex-end; */
 }
 
 
 
 
 /* 
-Thus align-items: baseline; aligns either by 
-bottom edge 1st line of text or by left 
-edge of element 
+flex-wrap — controls whether flex items stay 
+on one line or wrap onto multiple lines.
+justify-content — controls how items are 
+distributed along the main axis.
+align-items — controls how items are aligned 
+within each line, along the cross axis.
+align-content — controls how multiple lines
+ of flex items are spaced and distributed 
+ along the cross axis (only works when there
+  is wrapping).
 */
