@@ -4,9 +4,12 @@
   /* gap: 400px; */
   height: 300px;
   border: 3px solid red;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   /* justify-content: space-around; */
   /* justify-content: space-evenly; */
+  justify-content: center;
+  /* align-items: flex-start; */
+  align-items: baseline;
 }
 
 .box {
@@ -17,24 +20,24 @@
 
 .box-2 {
 font-size: 30px;
-/* margin-left: 10px; */
+margin-left: 20px;
 }   
 
 .box-4 {
  padding-top: 40px;
+ align-self: flex-start;
 }  
 
 .box-5 {
   padding-bottom: 30px;
+  align-self: flex-end;
 }
 
 
 
 
 /* 
-justify-content property lets us arrange 
-alignment along the main axes. Flexbox guide 
-lets us better understand every single value
-of ustify-content
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+Thus align-items: baseline; aligns either by 
+bottom edge 1st line of text or by left 
+edge of element 
 */
