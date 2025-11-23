@@ -1,53 +1,44 @@
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  /* gap: 400px; */
-  height: 300px;
+  position: relative;
+  height: 200px;
   border: 3px solid red;
-  justify-content: space-between;
-  /* justify-content: space-around; */
-  /* justify-content: space-evenly; */
-  /* justify-content: space-evenly; */
-  /* align-items: flex-start; */
-  align-items: flex-start;
-  align-content: center;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 
 .box {
- padding: 5px 10px;
- /* width: 500px; */
- border: 3px solid blue;
- background-color: yellow;
+  position: absolute;
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background-color: yellowgreen;
+  text-align: center;
+
+  /* margin: auto; */
 }
 
-.box-2 {
-font-size: 30px;
-/* margin-left: 20px; */
-}   
-
-.box-4 {
- padding-top: 40px;
- /* align-self: flex-start; */
-}  
-
-.box-5 {
-  padding-bottom: 30px;
-  /* align-self: flex-end; */
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
-
 
 
 
 /* 
-flex-wrap — controls whether flex items stay 
-on one line or wrap onto multiple lines.
-justify-content — controls how items are 
-distributed along the main axis.
-align-items — controls how items are aligned 
-within each line, along the cross axis.
-align-content — controls how multiple lines
- of flex items are spaced and distributed 
- along the cross axis (only works when there
-  is wrapping).
+Before Flexbox existed, vertical centering 
+was often done using the top: 50% and 
+transform: translateY(-50%) trick. Today, 
+we can center elements much more easily 
+using display: flex in most cases.
+
+position: absolute is still useful when you 
+need to place an element over another one, 
+such as an icon or badge.  
 */
