@@ -1,44 +1,42 @@
 .container {
-  position: relative;
-  height: 200px;
-  border: 3px solid red;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-}
-
-.box {
-  position: absolute;
-  right: 30px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  background-color: yellowgreen;
-  text-align: center;
-
-  /* margin: auto; */
+  width: 400px;
+  height: 200px;
+  font-size: 32px;
+  color: white;
+  border: 3px solid red;
+  flex-direction: column;
 }
 
-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.box-1 {
+ flex-grow: 1;
+ background-color: green;
+ flex-basis: 40px;
 }
-
+ 
+.box-2 {
+  flex-grow: 2;
+ background-color: blue;
+ flex-basis: 60px;
+ max-height: 110px;
+}
 
 
 /* 
-Before Flexbox existed, vertical centering 
-was often done using the top: 50% and 
-transform: translateY(-50%) trick. Today, 
-we can center elements much more easily 
-using display: flex in most cases.
+Flex-basis works similarly to width or 
+height for elements inside a flex container, 
+but its direction depends on the main axis.
+If the main axis is horizontal (row), 
+then flex-basis behaves like width.
+If the main axis is vertical (column), 
+then flex-basis behaves like height.
 
-position: absolute is still useful when you 
-need to place an element over another one, 
-such as an icon or badge.  
+flex-basis defines the starting size of an 
+element.
+flex-grow defines how the remaining free 
+space is distributed between elements.
+
+As usual, we can still limit element sizes 
+using properties such as max-width, 
+max-height, min-width, and min-height
 */
