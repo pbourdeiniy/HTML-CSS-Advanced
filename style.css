@@ -1,38 +1,55 @@
 .container {
   display: flex;
-  flex-direction: column-reverse;
-  height: 300px;
+  width: 50px;
+  height: 99px;
+  font-size: 32px;
+  color: white;
   border: 3px solid red;
+  
 }
 
-.box {
- display: inline;
- height: 50px;
- width: 60px;
- /* margin: auto; */
- border: 3px solid blue;
- background-color: yellow; 
- /* margin: 5px; */
+.box-1 {
+  flex-shrink: 1;
+ background-color: green;
+ flex-basis: 100px;
+}
+ 
+.box-2 {
+ flex-shrink: 2;
+ background-color: blue;
+ flex-basis: 150px;
 }
 
-/* .box-2 {
-  margin: 0 auto;
-}  */
+.box-3 {
+ flex-grow: 1;
+ background-color: yellow;
+ min-width: 50px;
+}
 
 
 /* 
-A container with display: flex provides 
-flexible control over its child elements. 
-Flexbox creates a consistent layout model 
-where vertical margin collapsing does not 
-occur, and margin: auto works for centering 
-and spacing elements. Also, the display 
-value of flex children does not affect 
-their layout: even if a flex item is set 
-to display: inline, it still behaves like 
-a block-level element and can have its 
-width and height defined, because all 
-direct children of a flex container are 
-treated as flex items.
+
+flex-shrink controls how much an element is 
+allowed to shrink when there is not enough 
+space in a flex container.
+The default value is 1, meaning all flex 
+items shrink proportionally to their 
+flex-basis (or size).
+If an element has flex-shrink: 0, it will 
+not shrink at all, even if the container is 
+smaller.
+Elements can never shrink smaller than:
+their longest unbreakable word / widest 
+intrinsic content,their min-width value 
+(if set).
+When multiple items have different 
+flex-shrink values (other than 0), 
+the missing space is removed proportionally 
+to:
+flex-basis × flex-shrink
+So if one box has flex-shrink: 1 and another
+ has flex-shrink: 3,the second box will 
+ lose space 3 times faster than the first 
+ one.
 
 */
