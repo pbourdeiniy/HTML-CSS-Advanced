@@ -1,42 +1,55 @@
 .container {
   display: flex;
-  width: 400px;
-  height: 200px;
+  width: 50px;
+  height: 99px;
   font-size: 32px;
   color: white;
   border: 3px solid red;
-  flex-direction: column;
+  
 }
 
 .box-1 {
- flex-grow: 1;
+  flex-shrink: 1;
  background-color: green;
- flex-basis: 40px;
+ flex-basis: 100px;
 }
  
 .box-2 {
-  flex-grow: 2;
+ flex-shrink: 2;
  background-color: blue;
- flex-basis: 60px;
- max-height: 110px;
+ flex-basis: 150px;
+}
+
+.box-3 {
+ flex-grow: 1;
+ background-color: yellow;
+ min-width: 50px;
 }
 
 
 /* 
-Flex-basis works similarly to width or 
-height for elements inside a flex container, 
-but its direction depends on the main axis.
-If the main axis is horizontal (row), 
-then flex-basis behaves like width.
-If the main axis is vertical (column), 
-then flex-basis behaves like height.
 
-flex-basis defines the starting size of an 
-element.
-flex-grow defines how the remaining free 
-space is distributed between elements.
+flex-shrink controls how much an element is 
+allowed to shrink when there is not enough 
+space in a flex container.
+The default value is 1, meaning all flex 
+items shrink proportionally to their 
+flex-basis (or size).
+If an element has flex-shrink: 0, it will 
+not shrink at all, even if the container is 
+smaller.
+Elements can never shrink smaller than:
+their longest unbreakable word / widest 
+intrinsic content,their min-width value 
+(if set).
+When multiple items have different 
+flex-shrink values (other than 0), 
+the missing space is removed proportionally 
+to:
+flex-basis × flex-shrink
+So if one box has flex-shrink: 1 and another
+ has flex-shrink: 3,the second box will 
+ lose space 3 times faster than the first 
+ one.
 
-As usual, we can still limit element sizes 
-using properties such as max-width, 
-max-height, min-width, and min-height
 */
